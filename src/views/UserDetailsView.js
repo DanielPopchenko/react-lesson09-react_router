@@ -1,13 +1,11 @@
 import { useEffect, useState } from 'react';
-import { useParams, useMatch } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import API from '../services/users-api';
 
 export default function UserDetailsView() {
   // ! Диструктуризируем объект params, достаем оттуда айдишник
   const { userID } = useParams();
   const [user, setUser] = useState(null);
-  const match = useMatch();
-  console.log(match);
 
   useEffect(() => {
     API.fetchUserById(userID).then(setUser);
