@@ -7,6 +7,9 @@ import AuthorsView from './views/AuthorsView';
 import UsersView from './views/UsersView';
 import NotFoundView from './NotFoundView';
 import UserDetailsView from './views/UserDetailsView';
+import AboutView from './views/AboutView';
+import AboutFirstView from './views/AboutFirstView';
+import AboutSecondView from './views/AboutSecondView';
 
 export default function App() {
   return (
@@ -14,6 +17,10 @@ export default function App() {
       <AppBar />
       <Routes>
         <Route path="/" element={<HomeView />} exact />
+        <Route path="/about" element={<AboutView />} />
+        <Route path="/about/first" element={<AboutFirstView />} />
+        <Route path="/about/second" element={<AboutSecondView />} />
+
         <Route path="/authors" element={<AuthorsView />} />
         <Route path="/users" element={<UsersView />} />
         <Route path="/users/:userID" element={<UserDetailsView />} exact />

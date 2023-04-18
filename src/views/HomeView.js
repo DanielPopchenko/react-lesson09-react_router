@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function HomeView() {
   return (
@@ -41,6 +42,8 @@ export default function HomeView() {
         laboriosam voluptatem exercitationem eius quis architecto corporis quasi corrupti
         voluptate! Corrupti, eum!
       </p>
+
+      <Link to="/about">About</Link>
     </>
   );
 }

@@ -1,3 +1,7 @@
+body {
+    color: rgb(24, 23, 23);
+}
+
 h1,
 h2,
 h3 {
@@ -15,4 +19,9 @@ h1 {
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
 }
