@@ -1,33 +1,32 @@
 import { Route, Routes } from 'react-router-dom';
-import Container from './components/Container/Container';
-import AppBar from './components/AppBar/AppBar';
+import './reset.css';
+import 'modern-normalize/modern-normalize.css';
+import './index.css';
+// ! Вместо Switch  в v6 версии сделали Routes
 
-import HomeView from './views/HomeView';
-import AuthorsView from './views/AuthorsView';
-import UsersView from './views/UsersView';
-import NotFoundView from './NotFoundView';
-import UserDetailsView from './views/UserDetailsView';
-import AboutView from './views/AboutView';
-import AboutFirstView from './views/AboutFirstView';
-import AboutSecondView from './views/AboutSecondView';
+import routes from './routes';
+
+import Home from './views/Home';
+import Shows from './views/Shows/Shows';
+import ShowDetails from './views/showDetails/ShowDetails';
+import NotFound from './views/NotFound';
+import AppBar from './components/AppBar/AppBar';
+// import { SignupForm } from './components/FormikForm';
 
 export default function App() {
   return (
-    <Container>
+    <>
       <AppBar />
+
+      {/* <SignupForm /> */}
+
       <Routes>
-        <Route path="/" element={<HomeView />} exact />
-        <Route path="/about" element={<AboutView />} />
-        <Route path="/about/first" element={<AboutFirstView />} />
-        <Route path="/about/second" element={<AboutSecondView />} />
-
-        <Route path="/authors" element={<AuthorsView />} />
-        <Route path="/users" element={<UsersView />} />
-        <Route path="/users/:userID" element={<UserDetailsView />} exact />
-
-        {/* ! path="*" - указывает что если сверзу вниз ни один path не подошел, то рендерит этот елемент ! */}
-        <Route path="*" element={<NotFoundView />}></Route>
+        <Route path={routes.home} element={<Home />} exact />
+        <Route path={routes.shows} element={<Shows />} />
+        <Route path={routes.showDetails} element={<ShowDetails />}></Route>
+        {/* <Redirect to="/" /> */}
+        <Route path={routes.all} element={<NotFound />}></Route>
       </Routes>
-    </Container>
+    </>
   );
 }

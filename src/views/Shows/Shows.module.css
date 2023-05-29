@@ -1,0 +1,28 @@
+.title {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+
+.showsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.showCard {
+    text-align: center;
+    background-color: #f3f1f1;
+    min-width: 160px;
+    border-radius: 4px;
+    padding: 20px 10px;
+}
+
+.link {
+    padding: 5px;
+    color: rgb(17, 168, 214);
+}

@@ -1,0 +1,32 @@
+/* ! Show details */
+
+.showDetails {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.showImage {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.225);
+}
+
+.goBackBtn {
+    cursor: pointer;
+    display: inline-block;
+    min-width: 100px;
+    color: rgb(17, 168, 214);
+    border: none;
+    background-color: #80808029;
+    padding: 4px 20px;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.div {
+    margin-left: 100px;
+}
